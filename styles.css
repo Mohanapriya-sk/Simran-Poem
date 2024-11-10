@@ -1,0 +1,478 @@
+/* @import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700..900"); */
+@import url(https://fonts.googleapis.com/css?family=Chewy);
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Inter"; */
+    /* font-family: "Shadows Into Light";
+     */
+    font-family: 'Chewy', cursive;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+    overflow-x: hidden;
+    /* background-image: url('assets/images/wall.jpeg');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    z-index:4;
+    position: relative; */
+}
+
+.chair {
+    position: fixed;
+    bottom: 20px;
+    /* Adjust spacing from bottom */
+    right: 20px;
+    /* Adjust spacing from right */
+    width: 300px;
+    /* Adjust for responsive sizing */
+    max-width: 40%;
+    /* Makes it responsive */
+    height: auto;
+    z-index: 10;
+    /* transform: scaleX(-1) */
+}
+
+/* .wall{
+
+    z-index: 5;
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+
+    width: 100%;
+    max-height: 100%;
+    display: flex; 
+    display: block;
+    position: fixed;
+    object-fit: cover;
+    z-index: -2;
+    object-position: left;
+    position-area: left;
+    transform: scaleX(-1);
+} */
+.house-wall {
+
+    background-color: #bfbfbf;
+    /* background: linear-gradient(135deg, #f0e4d7 25%, #e5d0b0 25%, #e5d0b0 50%, #f0e4d7 50%, #f0e4d7 75%, #e5d0b0 75%, #e5d0b0 100%); */
+
+}
+
+.parallax-section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    /* width: 100%;
+  height: 100%; */
+    z-index: 0;
+}
+
+.overlay-circle {
+    display: flex;
+}
+
+.parallax-image {
+    position: relative;
+    width: 100%;
+    /* Full width */
+    min-height: 100vh;
+    /* Ensure the height is at least the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    /* Ensure the whole image is visible */
+    background-repeat: no-repeat;
+    /* Avoid repeating the image */
+    background-attachment: fixed;
+    background-position: left center;
+}
+
+.image1 {
+    background-image: url('assets/images/image1.jpg');
+}
+
+.image2 {
+    background-image: url('assets/images/image2.jpg');
+}
+
+.image3 {
+    background-image: url('assets/images/image3.jpg');
+}
+
+.image4 {
+    background-image: url('assets/images/image4.jpg');
+    z-index: 2;
+}
+
+
+
+/* Parallax Effect Placeholder */
+.parallax-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .overlay-circle {
+        width: 150px;
+        height: 150px;
+        font-size: 0.9rem;
+        line-height: 130px;
+    }
+}
+
+#paralx0 {
+    position: absolute;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    /* text-align: center; */
+    /* top:50px; */
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    box-shadow: 10px 5px 25px #333;
+    color: #fff;
+}
+
+#paralx0 {
+    background-color: #01579b;
+    top: 30%;
+    left: 65%;
+    z-index: 22;
+}
+
+.frame-container {
+    position: relative;
+    width: 100%;
+
+    margin: auto;
+}
+
+.window-frame {
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    display: block;
+    position: fixed;
+    object-fit: contain;
+    z-index: 1;
+    object-position: left;
+    position-area: left;
+}
+
+.content-display {
+    position: fixed;
+    top: 2%;
+    /* right: 3%; */
+    left: 45%;
+    width: 30%;
+    z-index: 10;
+    font-size: 1.3rem;
+    /* color: #333; */
+    padding: 20px;
+    background-color: #f5f5f5;
+    /* margin: 20px auto; */
+    /* text-align: center; */
+}
+
+.content-display h2 {
+    margin: 0 0 20px;
+    background-color: skyblue;
+    color: black;
+    padding: 15px;
+    width: calc(100% + 100px);
+    position: relative;
+    left: -50px;
+}
+
+.content-display h2::before,
+.content-display h2::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    border-width: 15px;
+    border-style: solid;
+}
+
+.content-display h2::before {
+    left: 0;
+    border-color: #02766b #02766b transparent transparent;
+}
+
+.content-display h2::after {
+    right: 0;
+    border-color: #02766b transparent transparent #02766b;
+}
+
+.content-display p {
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+#sun,
+#moon {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.9;
+    box-shadow: 0px 0px 40px 15px white;
+    z-index: 2;
+}
+
+#sun {
+    left: 6vw;
+}
+
+#clouds {
+    position: fixed;
+    z-index: 2;
+    inset: 0;
+}
+
+.cloud {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: -200px;
+    background-color: white;
+    border-radius: 50%;
+    animation: cloudMove linear infinite;
+
+    &:before,
+    &:after {
+        content: "";
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+    }
+
+    &:before {
+        width: 70%;
+        height: 70%;
+        left: -30%;
+        top: 30%;
+    }
+
+    &:after {
+        width: 80%;
+        height: 80%;
+        right: -35%;
+        bottom: 0;
+    }
+}
+
+@keyframes cloudMove {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 38%;
+    }
+}
+
+#audioButton .fa-volume-up {
+    font-size: 30px;
+    /* Icon size */
+    color: white;
+    /* Icon color */
+    transition: transform 0.3s ease;
+    /* Smooth transform when scrolling */
+}
+
+#audioButton:hover .fa-volume-up {
+    transform: scale(1.2);
+    /* Slightly enlarge the icon when hovered */
+}
+
+@media (max-width: 768px) {
+    .content-display {
+        position: sticky;
+        width: 100%;
+        height: 150px;
+        OVERFLOW-Y: scroll;
+        bottom: 0;
+        right: auto;
+        /* margin-top: 20px; */
+        padding: 15px;
+        font-size: 1rem;
+        background-color: #f5f5f5;
+    }
+
+    .parallax-image {
+        background-position: top;
+    }
+
+    .window-frame {
+        object-position: top;
+        position-area: top;
+    }
+
+    .content-display h2 {
+        width: 100%;
+        /* Adjust title width */
+        left: 0;
+        /* Reset left position */
+        font-size: 1.2rem;
+        /* Smaller title font size */
+        padding: 10px;
+        /* Adjust padding */
+    }
+
+    .content-display h2::before,
+    .content-display h2::after {
+        display: none;
+        /* Remove decorative arrows for simplicity */
+    }
+
+    .content-display p {
+        font-size: 0.9rem;
+        /* Smaller paragraph text */
+        line-height: 1.4;
+        /* Adjust line height */
+    }
+
+    .cloud {
+        width: 50px;
+        height: 50px;
+    }
+
+    #sun {
+        width: 120px;
+        height: 120px;
+    }
+
+    .scroll-button {
+        left: 90%;
+    }
+
+    @keyframes cloudMove {
+        0% {
+            left: -100px;
+        }
+
+        100% {
+            left: 100%;
+        }
+    }
+}
+
+#button {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-button,
+.audio-button {
+    position: fixed;
+    bottom: 10px;
+    left: 95%;
+    transform: translateX(-50%);
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: bounce 2s infinite;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0) translateX(-50%);
+    }
+
+    40% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+
+    60% {
+        transform: translateY(-5px) translateX(-50%);
+    }
+}
+
+#arrowSymbol {
+
+    transition: transform 0.3s ease;
+    /* Smooth transition for flipping */
+    /* transform: rotate(180deg); */
+}
+
+#arrowSymbol.flipped {
+    transform: rotate(180deg);
+    /* Flip the arrow symbol */
+}
