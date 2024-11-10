@@ -476,3 +476,6 @@ body {
     transform: rotate(180deg);
     /* Flip the arrow symbol */
 }
+#backgroundMusic{
+    display: none;
+}
